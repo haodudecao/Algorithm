@@ -2,8 +2,8 @@
 
 ```
 /**
-*jj 原创  date 190926
-*/
+ *jj 原创  date 190926
+ */
 function bubbleSort(array $nums): array
 {
     for ($count = count($nums); $count > 1; $count--) {
