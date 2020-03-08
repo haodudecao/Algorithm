@@ -1,0 +1,6 @@
+二分查找/折半查找
+
+function binary_search(array:$arr = [])
+{
+  
+}
