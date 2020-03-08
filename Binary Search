@@ -11,9 +11,6 @@ function binary_search(array $arr = [], $needle)
     $end = $num -1;
     while($start <= $end) {
         $midNum = intval(($end + $start) / 2);
-        if ($end == $start) {
-            return $end;
-        }
         if ($arr[$midNum] == $needle) {
             return $midNum;
         } else {
