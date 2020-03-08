@@ -10,7 +10,7 @@ function binary_search(array $arr = [], $needle)
     $start = 0;
     $end = $num;
     while($num != 1) {
-        $midNum = intval(($end - $start) / 2);
+        $midNum = intval(($end + $start) / 2);
         if ($end == $start) {
             return $end;
         }
