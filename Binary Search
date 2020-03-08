@@ -1,6 +1,29 @@
-二分查找/折半查找
+/**
+ * 二分查找/折半查找
+ * $arr  有序数组 从小到大
+ * $needle  目标值
+ */
 
-function binary_search(array:$arr = [])
+function binary_search(array $arr = [], $needle)
 {
-  
+    $num = count($arr);
+    $start = 0;
+    $end = $num;
+    while($num != 1) {
+        $midNum = intval(($end - $start) / 2);
+        if ($end == $start) {
+            return $end;
+        }
+        if ($arr[$midNum] == $needle) {
+            return $midNum;
+        } else {
+            if ($arr[$midNum] > $needle) {
+                $end = $midNum - 1;
+            } else {
+                $start = $midNum+ 1;
+            }
+        }
+        $num = count($arr);
+    }
+    return $arr;
 }
